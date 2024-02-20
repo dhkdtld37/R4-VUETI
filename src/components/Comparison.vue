@@ -31,8 +31,8 @@ const postsGraph = ref([])
 async function fetchData() {
   postsDb.value = null
   postsGraph.value = null
-  const resDb = await fetch(`https://r1-json-server.fly.dev/db`)
-  const resGraph = await fetch(`https://r1-json-server.fly.dev/graph`)
+  const resDb = await fetch(`http://r1-json-server.fly.dev/db`)
+  const resGraph = await fetch(`http://r1-json-server.fly.dev/graph`)
   postsDb.value = await resDb.json()
   postsGraph.value = await resGraph.json()
 }

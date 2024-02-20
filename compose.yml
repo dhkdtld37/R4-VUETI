@@ -4,9 +4,14 @@ name: r4
       build: .
       ports:
         - 7777:80
+      links:
+        - json
+      depends_on:
+        - json
     
     json:
       image: dhkdtld37/r1-json-server-alpine:240220.1
+      container_name: r1-json-server.fly.dev
       ports:
         - 7778:80
 
