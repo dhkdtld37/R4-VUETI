@@ -1,6 +1,6 @@
 <template> 
   <div>
-    <h2>매출 비교 그래프</h2><br>
+    <h2>매출 비교 그래프2</h2><br>
     <canvas id="myChart" width="400" height="400"></canvas>
   </div>
   <!-- <div>
@@ -20,7 +20,7 @@ const graphData = ref([]);
 
 async function fetchData() {
   graphData.value = null;
-  const res = await fetch(`https://r1-json-server.fly.dev/graph`);
+  const res = await fetch(`http://localhost:7778/graph`);
   const jsonData = await res.json();
   
   // 날짜별 중복 제거

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>주문 목록</h2><br>
+    <h2>주문 목록.</h2><br>
     <div>
       <input type="text" placeholder="검색어 입력" v-model="searchKeyword">
       <select name="search" v-model="selectedOption">
@@ -44,7 +44,7 @@ const selectedOption = ref('') // 추가: 선택된 옵션을 저장할 변수
 const currentPage = ref(0);
 
 async function fetchData() {
-    const response = await fetch("http://r1-json-server.fly.dev/db");
+    const response = await fetch("http://localhost:7778/db");
     jsonData.value = await response.json();
 }
 

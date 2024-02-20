@@ -27,13 +27,13 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue';
 
-const searchQuery = ref(''); //양방향 검색 담을 그릇
+const searchQuery = ref(''); //양방향 검색 담을 그릇 ㅇㅇ
 const posts = ref([]); // json 값 담을 그릇
 const filteredPosts = ref([]); // 출력 값 담을 그릇
 const currentPage = ref(0);
 
 async function fetchData() {
-  const res = await fetch(`https://r1-json-server.fly.dev/pack`);
+  const res = await fetch(`http://localhost:7778/pack`);
   posts.value = await res.json();
 }
 
