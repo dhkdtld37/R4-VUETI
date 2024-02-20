@@ -44,7 +44,7 @@ const selectedOption = ref('') // 추가: 선택된 옵션을 저장할 변수
 const currentPage = ref(0);
 
 async function fetchData() {
-    const response = await fetch("https://r1-json-server.fly.dev/db");
+    const response = await fetch("http://r1-json-server.fly.dev/db");
     jsonData.value = await response.json();
 }
 
