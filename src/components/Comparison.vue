@@ -2,7 +2,7 @@
   <div class="table-container">
     <h2>날짜 별 판매 수량</h2><br>
     <table style="border:1px">
-      <!-- 날짜를 기준으로 항목들을 그룹화하여 순회 -->
+      <!-- 날짜를 기준으로 항목들을 그룹화하여 순회 ㅇㅇ -->
       <div v-for="(group, date) in sortedGroupedPosts" :key="date">
         <h3>{{ date }}</h3><br>
         <!-- 각 그룹에 속한 항목들을 출력 -->
@@ -31,8 +31,8 @@ const postsGraph = ref([])
 async function fetchData() {
   postsDb.value = null
   postsGraph.value = null
-  const resDb = await fetch(`https://r1-json-server.fly.dev/db`)
-  const resGraph = await fetch(`https://r1-json-server.fly.dev/graph`)
+  const resDb = await fetch(`http://localhost:7778/db`)
+  const resGraph = await fetch(`http://localhost:7778/graph`)
   postsDb.value = await resDb.json()
   postsGraph.value = await resGraph.json()
 }

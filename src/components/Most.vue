@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>최다 판매 상품</h2><br>
+    <h2>최다 판매 상품!</h2><br>
     <table>
       <thead>
         <tr>
@@ -43,7 +43,7 @@ const sortedDb = ref([]);
 
 async function fetchData() {
   db.value = null;
-  const res = await fetch(`https://r1-json-server.fly.dev/db`);
+  const res = await fetch(`http://localhost:7778/db`);
   db.value = await res.json();
   sortDbByTotalValue();
 }
